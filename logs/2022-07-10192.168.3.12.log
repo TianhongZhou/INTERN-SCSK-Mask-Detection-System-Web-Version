@@ -1,0 +1,14 @@
+{
+    "@timestamp": "2022-07-10 22:03:10,463",
+    "Module": "views",
+    "Lineno": 30,
+    "Level": "INFO",
+    "Message": "{'Number of People': '1', 'Result': 'No mask', 'Score': '0.9733268618583679', 'Platform': 'Baidu'}"
+}
+{
+    "@timestamp": "2022-07-10 22:03:24,602",
+    "Module": "views",
+    "Lineno": 30,
+    "Level": "INFO",
+    "Message": "{'Number of People': '2', 'Result': 'No mask', 'Score': '0.9411236643791199', 'Platform': 'Baidu'}"
+}

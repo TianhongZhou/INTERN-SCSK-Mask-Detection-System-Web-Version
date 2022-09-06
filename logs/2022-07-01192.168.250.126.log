@@ -1,0 +1,49 @@
+{
+    "@timestamp": "2022-07-01 09:18:03,619",
+    "Module": "views",
+    "Lineno": 31,
+    "Level": "INFO",
+    "Message": "{'Number of People': '1', 'Result': 'Wearing mask', 'Score': '0.9837295413017273', 'Platform': 'Baidu'}"
+}
+{
+    "@timestamp": "2022-07-01 09:22:57,980",
+    "Module": "views",
+    "Lineno": 31,
+    "Level": "INFO",
+    "Message": "{'Number of People': '1', 'Result': 'Wearing mask', 'Score': '0.9458428025245667', 'Platform': 'Baidu'}"
+}
+{
+    "@timestamp": "2022-07-01 09:41:28,301",
+    "Module": "views",
+    "Lineno": 31,
+    "Level": "INFO",
+    "Message": "{'Number of People': '1', 'Result': 'No mask', 'Score': '0.99327152967453', 'Platform': 'Baidu'}"
+}
+{
+    "@timestamp": "2022-07-01 15:13:30,907",
+    "Module": "views",
+    "Lineno": 31,
+    "Level": "INFO",
+    "Message": "{'Number of People': '1', 'Result': 'Wearing mask', 'Score': '0.9999989867210388', 'Platform': 'Baidu'}"
+}
+{
+    "@timestamp": "2022-07-01 15:23:44,692",
+    "Module": "views",
+    "Lineno": 31,
+    "Level": "INFO",
+    "Message": "{'Number of People': '1', 'Result': 'Wearing mask', 'Score': '0.7077368497848511', 'Platform': 'Baidu'}"
+}
+{
+    "@timestamp": "2022-07-01 15:42:22,348",
+    "Module": "views",
+    "Lineno": 31,
+    "Level": "INFO",
+    "Message": "{'Number of People': '1', 'Result': 'Wearing mask', 'Score': '0.9501005411148071', 'Platform': 'Baidu'}"
+}
+{
+    "@timestamp": "2022-07-01 15:42:31,017",
+    "Module": "views",
+    "Lineno": 31,
+    "Level": "INFO",
+    "Message": "{'Number of People': '1', 'Result': 'No mask', 'Score': '0.9914404153823853', 'Platform': 'Baidu'}"
+}

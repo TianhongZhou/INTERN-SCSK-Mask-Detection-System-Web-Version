@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body
+{
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+.sec h1
+{
+    position: absolute;
+    margin-left: 625px;
+    font-size: 15px;
+}
+.sec button
+{
+    background-color: #e7e7e7;
+    border: none;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px 32px;
+    font-size: 16px;
+    border-radius: 10px;
+    position: absolute;
+    margin-left: 625px;
+    margin-top: 72px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+.sec button:hover
+{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.24), 0 6px 10px 0 rgba(0,0,0,0.19);
+}
+.sec h2
+{
+    position: absolute;
+    margin-left: 825px;
+    font-size: 15px;
+}
+.sec select
+{
+    background-color: #e7e7e7;
+    border: none;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px 32px;
+    font-size: 16px;
+    border-radius: 10px;
+    position: absolute;
+    margin-left: 825px;
+    margin-top: 72px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+.sec select:hover
+{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.24), 0 6px 10px 0 rgba(0,0,0,0.19);
+}
+.sec h4
+{
+    position: absolute;
+    margin-left: 1025px;
+    font-size: 15px;
+}
+.sec h3
+{
+    position: absolute;
+    margin-left: 1025px;
+    margin-top: 340px;
+    font-size: 15px;
+}
+.sec input
+{
+    background-color: #e7e7e7;
+    border: none;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px 32px;
+    font-size: 16px;
+    border-radius: 10px;
+    position: absolute;
+    margin-left: 1025px;
+    margin-top: 420px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+.sec input:hover
+{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.24), 0 6px 10px 0 rgba(0,0,0,0.19);
+}
+.sec label
+{
+    color: black;
+    font-size: 25px;
+    position: absolute;
+    margin-top: 37%;
+    margin-left: 30%;
+}
+#threshold1
+{
+    position: absolute;
+    margin-top: 260px;
+    margin-left: 1025px;
+    width: 200px;
+    height: 30px;
+}
+#threshold2
+{
+    position: absolute;
+    margin-top: 300px;
+    margin-left: 1025px;
+    width: 200px;
+    height: 30px;
+}
+#A
+{
+    position: absolute;
+    margin-top: 260px;
+    margin-left: 1235px;
+    font-size: 20px;
+}
+#B
+{
+    position: absolute;
+    margin-top: 300px;
+    margin-left: 1235px;
+    font-size: 20px;
+}

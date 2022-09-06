@@ -1,0 +1,98 @@
+{
+    "@timestamp": "2022-07-29 11:07:34,411",
+    "Module": "views",
+    "Lineno": 30,
+    "Level": "INFO",
+    "Message": "{'Number of People': '1', 'Result': 'No mask', 'Score': '0.9630992412567139', 'Platform': 'Baidu'}"
+}
+{
+    "@timestamp": "2022-07-29 12:06:05,374",
+    "Module": "views",
+    "Lineno": 30,
+    "Level": "INFO",
+    "Message": "{'Number of People': 1, 'Result': ['nomask'], 'Score': [0.8010776042938232], 'Platform': 'SNN'}"
+}
+{
+    "@timestamp": "2022-07-29 12:08:53,106",
+    "Module": "views",
+    "Lineno": 30,
+    "Level": "INFO",
+    "Message": "{'Number of People': 1, 'Result': ['nomask', 'nomask'], 'Score': [0.7250807285308838, 0.6170473098754883], 'Platform': 'SNN'}"
+}
+{
+    "@timestamp": "2022-07-29 12:10:35,099",
+    "Module": "views",
+    "Lineno": 30,
+    "Level": "INFO",
+    "Message": "{'Number of People': 1, 'Result': ['nomask'], 'Score': [0.773581862449646], 'Platform': 'SNN'}"
+}
+{
+    "@timestamp": "2022-07-29 12:11:20,477",
+    "Module": "views",
+    "Lineno": 30,
+    "Level": "INFO",
+    "Message": "{'Number of People': 1, 'Result': ['nomask'], 'Score': [0.6887860894203186], 'Platform': 'SNN'}"
+}
+{
+    "@timestamp": "2022-07-29 12:11:48,679",
+    "Module": "views",
+    "Lineno": 30,
+    "Level": "INFO",
+    "Message": "{'Number of People': 0, 'Result': [], 'Score': [], 'Platform': 'SNN'}"
+}
+{
+    "@timestamp": "2022-07-29 12:12:26,724",
+    "Module": "views",
+    "Lineno": 30,
+    "Level": "INFO",
+    "Message": "{'Number of People': 2, 'Result': ['mask', 'mask'], 'Score': [0.8971430659294128, 0.6833780407905579], 'Platform': 'SNN'}"
+}
+{
+    "@timestamp": "2022-07-29 12:20:56,644",
+    "Module": "views",
+    "Lineno": 30,
+    "Level": "INFO",
+    "Message": "{'Number of People': 1, 'Result': ['nomask'], 'Score': [0.9286746382713318], 'Platform': 'SNN'}"
+}
+{
+    "@timestamp": "2022-07-29 14:59:48,833",
+    "Module": "views",
+    "Lineno": 30,
+    "Level": "INFO",
+    "Message": "{'Number of People': '1', 'Result': 'No mask', 'Score': '0.9581093788146973', 'Platform': 'Baidu'}"
+}
+{
+    "@timestamp": "2022-07-29 15:38:51,080",
+    "Module": "views",
+    "Lineno": 30,
+    "Level": "INFO",
+    "Message": "{'Number of People': '1', 'Result': 'No mask', 'Score': '0.9833990335464478', 'Platform': 'Baidu'}"
+}
+{
+    "@timestamp": "2022-07-29 15:39:08,859",
+    "Module": "views",
+    "Lineno": 30,
+    "Level": "INFO",
+    "Message": "{'Number of People': '1', 'Result': 'No mask', 'Score': '0.9937132000923157', 'Platform': 'Baidu'}"
+}
+{
+    "@timestamp": "2022-07-29 15:40:07,682",
+    "Module": "views",
+    "Lineno": 30,
+    "Level": "INFO",
+    "Message": "{'Number of People': '1', 'Result': 'No mask', 'Score': '0.9704146981239319', 'Platform': 'Baidu'}"
+}
+{
+    "@timestamp": "2022-07-29 15:51:01,836",
+    "Module": "views",
+    "Lineno": 30,
+    "Level": "INFO",
+    "Message": "{'Number of People': '1', 'Result': 'No mask', 'Score': '0.9891519546508789', 'Platform': 'Baidu'}"
+}
+{
+    "@timestamp": "2022-07-29 15:51:58,453",
+    "Module": "views",
+    "Lineno": 30,
+    "Level": "INFO",
+    "Message": "{'Number of People': '1', 'Result': 'No mask', 'Score': '0.9891519546508789', 'Platform': 'Baidu'}"
+}

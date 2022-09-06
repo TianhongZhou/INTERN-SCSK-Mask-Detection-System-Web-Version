@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="ja">
+
+	<head>
+		<title>GET VIDEO</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="/static/css/getVideo.css">
+	</head>
+
+	<body>
+		<div class="sec" id="sec">
+<!--			<h1>Step 1: Click here<br>to take a photo<br>for detecting mask</h1>-->
+<!--            <button id="jietu">Photo</button>-->
+<!--			<h2>Step 2: Choose the<br>AI algorithm platform<br>you want to use</h2>-->
+<!--			<select id="method">-->
+<!--				<option>Baidu</option>-->
+<!--				<option>SNN</option>-->
+<!--			</select>-->
+<!--			<h3>Step 3: Click here<br>to detect</h3>-->
+<!--			<input type="button" value="Detect" onclick="detect('', 'POST')" />-->
+<!--            <label id="result">Result will show here: {{ result }}</label>-->
+			<h1>ステップ1：ここをクリ<br>ックして、マスク検知た<br>めの写真をとります。</h1>
+			<button id="jietu">シュート</button>
+			<h2>ステップ2：お使いたい<br>AIアルゴリズムプラッ<br>トフォームを選びます。</h2>
+			<select id="method">
+				<option>SNN</option>
+				<option>Baidu</option>
+			</select>
+			<h3>ステップ4：ここをクリック<br>して、検知用の写真をAIアルゴリ<br>ズムプラットフォームに送ります。</h3>
+			<h4>ステップ3：2つの数値を入力します<br>（0より大きく1より小さい）。 
+				<br>検出スコアが閾値Aより大きい場合、<br>マスクが着用されていると判断されます。 
+				<br>検出スコアがしきい値Bより大きく、<br>しきい値Aより小さい場合は、
+				<br>手動による検証が必要です。<br>検出スコアが閾値B未満の場合、
+				<br>マスクは着用されていないと判断されます。</h4>
+			<input type="button" value="検出" onclick="detect('', 'POST')" />
+            <label id="result">結果はこちら: {{ result }}</label>
+			<input id="threshold1" type="input">
+			<input id="threshold2" type="input">
+			<label id="A">A</label>
+			<label id="B">B</label>
+		</div>
+
+		<video id="video" class="vio" autoplay="autoplay"></video>
+		<canvas id="canvas" width="600px" height="450px" style="left: 100px;"></canvas>
+		<a id="down" style="opacity: 0;"></a>
+		<label id="img" hidden>{{ img }}</label>
+
+		<script>
+			let constraints = {
+    			audio: false,
+    			video: {
+        			width: 600,
+        			height: 450
+    			}
+			};
+			let threshold1 = document.getElementById("threshold1")
+			let threshold2 = document.getElementById("threshold2")
+			let image_result = document.getElementById("result");
+			let image_to_down = document.getElementById("img");
+			let video = document.getElementById("video");
+			let jietu = document.getElementById('jietu');
+			let method = document.getElementById('method');
+			let MediaStreamTrack,image,
+				canvas = document.getElementById("canvas"),
+				context = canvas.getContext("2d");
+			var chunks = [];
+
+			if (window.stream) {
+				window.stream.getTracks().forEach(track => {
+	  				track.stop();
+				});
+			};
+
+			window.onload = function() {
+				isUseVideo();
+				let promise = navigator.mediaDevices.getUserMedia(constraints);
+
+				promise.then((MediaStream) => {
+					console.log(MediaStream);
+					MediaStreamTrack = MediaStream;
+					if ("srcObject" in video) {
+						video.srcObject = MediaStream;
+					} else {
+						video.src = window.URL.createObjectURL(MediaStream);
+					}
+					video.onloadedmetadata = function(e) {
+						video.play();
+					};
+				}).catch((error) => {
+					console.info(error);
+				});
+
+				// capture
+				jietu.addEventListener('click', capture);
+
+				if (image_result.innerText == "結果はこちら: マスクを着用していない" | image_result.innerText == "結果はこちら: 手作業で点検してください") {
+					var newDate = new Date();
+					downloadFile(image_to_down.innerText, newDate.toLocaleString());
+				};
+
+				if (image_result.innerText == "結果はこちら: マスクを着用していない") {
+					image_result.style = "background-color: red"
+				} else if (image_result.innerText == "結果はこちら: 手作業で点検してください") {
+					image_result.style = "background-color: yellow"
+				} else if (image_result.innerText == "結果はこちら: マスクをかぶって") {
+					image_result.style = "background-color: green"
+				} else {
+					image_result.style = "background-color: white"
+				}
+			};
+			
+			// download file after photo was taken
+			function downloadFile(content, fileName) {
+				var base64ToBlob = function(code) {
+					let parts = code.split(';base64,');
+					let contentType = parts[0].split(':')[1];
+					let raw = window.atob(parts[1]);
+					let rawLength = raw.length;
+					let uInt8Array = new Uint8Array(rawLength);
+					for(let i = 0; i < rawLength; ++i) {
+						uInt8Array[i] = raw.charCodeAt(i);
+					}
+					return new Blob([uInt8Array], {
+						type: contentType
+					});
+				};
+				let aLink = document.createElement('a');
+				let blob = base64ToBlob(content);
+				let evt = document.createEvent("HTMLEvents");
+				evt.initEvent("click", true, true);
+				aLink.download = fileName;
+				aLink.href = URL.createObjectURL(blob);
+				aLink.click();
+			};
+
+			// check whether the web can use camera
+			function isUseVideo(){
+				if (navigator.mediaDevices === undefined) {
+					navigator.mediaDevices = {};
+				}
+
+				if (navigator.mediaDevices.getUserMedia === undefined) {
+
+					navigator.mediaDevices.getUserMedia = function(constraints) {
+
+						var getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || 
+											navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia
+
+						if (!getUserMedia) {
+							return Promise.reject(new Error('getUserMedia is not implemented in this browser'));
+						}
+
+						return new Promise(function(resolve, reject) {
+							getUserMedia.call(navigator, constraints, resolve, reject);
+						});
+					}
+				}
+			}
+
+			// capture screen
+			function capture(){
+				context.drawImage(video, 0, 150, 400, 300);
+
+				// get base64 link
+				image = canvas.toDataURL('image/png');
+
+				//add image to page
+				document.body.appendChild(img)
+
+				if (image) {
+
+					// convert page to file
+					let res = dataURLtoFile(image, 'ssssss')
+					console.log(res)
+				}
+			}
+
+			// convert back to file
+			function dataURLtoFile(dataurl, filename) {
+				var arr = dataurl.split(','),
+					mime = arr[0].match(/:(.*?);/)[1],
+					bstr = atob(arr[1]),
+					n = bstr.length,
+					u8arr = new Uint8Array(n);
+
+				while (n--) {
+					u8arr[n] = bstr.charCodeAt(n);
+				}
+
+				return new File([u8arr], filename, {
+					type: mime
+				});
+			}
+
+			// send request
+			function detect(url, action) {
+				if (!image) {
+					alert("Please take a photo first!");
+					return;
+				}
+				if (threshold1.value < 0 | threshold1.value > 1 | threshold2.value < 0 | threshold2.value > 1 | !threshold1.value | !threshold2.value) {
+					alert("Please enter a number between 0 and 1");
+					return;
+				}
+
+				var form = document.createElement("form");
+				form.action = url;
+				form.method = action;
+
+				// append input attribute and valus
+				input = document.createElement("input");
+				input.name = "img";
+				input.value = image;
+
+				// append key-value to form
+				form.appendChild(input)
+
+				method_input = document.createElement("input");
+				method_input.name = "method";
+				method_input.value = method.value;
+
+				form.appendChild(method_input);
+
+				threshold1_input = document.createElement("input");
+				threshold1_input.name = "t1";
+				threshold1_input.value = threshold1.value;
+
+				form.appendChild(threshold1_input);
+
+				threshold2_input = document.createElement("input");
+				threshold2_input.name = "t2";
+				threshold2_input.value = threshold2.value;
+
+				form.appendChild(threshold2_input);
+
+				// send post request
+				document.body.appendChild(form);
+				form.submit();
+
+				// remove form from document
+				document.body.removeChild(form);
+			}
+		</script>
+	</body>
+</html>

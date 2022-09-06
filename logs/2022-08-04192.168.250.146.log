@@ -1,0 +1,133 @@
+{
+    "@timestamp": "2022-08-04 11:48:43,250",
+    "Module": "views",
+    "Lineno": 30,
+    "Level": "INFO",
+    "Message": "{'Number of People': '1', 'Result': 'No mask', 'Score': '0.997007429599762', 'Platform': 'Baidu'}"
+}
+{
+    "@timestamp": "2022-08-04 11:49:02,890",
+    "Module": "views",
+    "Lineno": 30,
+    "Level": "INFO",
+    "Message": "{'Number of People': 1, 'Result': ['nomask'], 'Score': [0.8707680106163025], 'Platform': 'SNN'}"
+}
+{
+    "@timestamp": "2022-08-04 11:57:10,364",
+    "Module": "views",
+    "Lineno": 30,
+    "Level": "INFO",
+    "Message": "{'Number of People': 1, 'Result': ['nomask'], 'Score': [0.8789980411529541], 'Platform': 'SNN'}"
+}
+{
+    "@timestamp": "2022-08-04 11:58:08,959",
+    "Module": "views",
+    "Lineno": 30,
+    "Level": "INFO",
+    "Message": "{'Number of People': 1, 'Result': ['nomask'], 'Score': [0.8744687438011169], 'Platform': 'SNN'}"
+}
+{
+    "@timestamp": "2022-08-04 12:00:54,190",
+    "Module": "views",
+    "Lineno": 30,
+    "Level": "INFO",
+    "Message": "{'Number of People': 1, 'Result': ['nomask'], 'Score': [0.8842079043388367], 'Platform': 'SNN'}"
+}
+{
+    "@timestamp": "2022-08-04 12:02:06,015",
+    "Module": "views",
+    "Lineno": 30,
+    "Level": "INFO",
+    "Message": "{'Number of People': 1, 'Result': ['nomask'], 'Score': [0.8346194624900818], 'Platform': 'SNN'}"
+}
+{
+    "@timestamp": "2022-08-04 13:02:48,166",
+    "Module": "views",
+    "Lineno": 30,
+    "Level": "INFO",
+    "Message": "{'Number of People': 1, 'Result': ['nomask'], 'Score': [0.9485500454902649], 'Platform': 'SNN'}"
+}
+{
+    "@timestamp": "2022-08-04 13:03:27,194",
+    "Module": "views",
+    "Lineno": 30,
+    "Level": "INFO",
+    "Message": "{'Number of People': 1, 'Result': ['nomask'], 'Score': [0.9452718496322632], 'Platform': 'SNN'}"
+}
+{
+    "@timestamp": "2022-08-04 13:06:34,778",
+    "Module": "views",
+    "Lineno": 30,
+    "Level": "INFO",
+    "Message": "{'Number of People': '1', 'Result': 'No mask', 'Score': '0.9877128601074219', 'Platform': 'Baidu'}"
+}
+{
+    "@timestamp": "2022-08-04 13:06:41,408",
+    "Module": "views",
+    "Lineno": 30,
+    "Level": "INFO",
+    "Message": "{'Number of People': 1, 'Result': ['nomask'], 'Score': [0.9093179106712341], 'Platform': 'SNN'}"
+}
+{
+    "@timestamp": "2022-08-04 13:18:21,139",
+    "Module": "views",
+    "Lineno": 30,
+    "Level": "INFO",
+    "Message": "{'Number of People': 1, 'Result': ['mask'], 'Score': [0.9748808145523071], 'Platform': 'SNN'}"
+}
+{
+    "@timestamp": "2022-08-04 13:18:31,223",
+    "Module": "views",
+    "Lineno": 30,
+    "Level": "INFO",
+    "Message": "{'Number of People': 1, 'Result': ['nomask'], 'Score': [0.9404884576797485], 'Platform': 'SNN'}"
+}
+{
+    "@timestamp": "2022-08-04 13:21:23,370",
+    "Module": "views",
+    "Lineno": 30,
+    "Level": "INFO",
+    "Message": "{'Number of People': 1, 'Result': ['mask'], 'Score': [0.9731346964836121], 'Platform': 'SNN'}"
+}
+{
+    "@timestamp": "2022-08-04 13:24:45,093",
+    "Module": "views",
+    "Lineno": 30,
+    "Level": "INFO",
+    "Message": "{'Number of People': 1, 'Result': ['mask'], 'Score': [0.9932863712310791], 'Platform': 'SNN'}"
+}
+{
+    "@timestamp": "2022-08-04 13:30:53,760",
+    "Module": "views",
+    "Lineno": 30,
+    "Level": "INFO",
+    "Message": "{'Number of People': 1, 'Result': ['mask'], 'Score': [0.9924635291099548], 'Platform': 'SNN'}"
+}
+{
+    "@timestamp": "2022-08-04 13:31:21,956",
+    "Module": "views",
+    "Lineno": 30,
+    "Level": "INFO",
+    "Message": "{'Number of People': 1, 'Result': ['mask'], 'Score': [0.9903659224510193], 'Platform': 'SNN'}"
+}
+{
+    "@timestamp": "2022-08-04 13:31:33,502",
+    "Module": "views",
+    "Lineno": 30,
+    "Level": "INFO",
+    "Message": "{'Number of People': 1, 'Result': ['mask'], 'Score': [0.9895248413085938], 'Platform': 'SNN'}"
+}
+{
+    "@timestamp": "2022-08-04 13:32:38,433",
+    "Module": "views",
+    "Lineno": 30,
+    "Level": "INFO",
+    "Message": "{'Number of People': 1, 'Result': ['nomask'], 'Score': [0.9235214591026306], 'Platform': 'SNN'}"
+}
+{
+    "@timestamp": "2022-08-04 14:51:19,557",
+    "Module": "views",
+    "Lineno": 30,
+    "Level": "INFO",
+    "Message": "{'Number of People': 1, 'Result': ['nomask'], 'Score': [0.8256455659866333], 'Platform': 'SNN'}"
+}

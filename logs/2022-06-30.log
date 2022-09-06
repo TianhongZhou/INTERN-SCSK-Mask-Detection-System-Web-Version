@@ -1,0 +1,10 @@
+{
+    "@timestamp": "2022-06-30 16:54:05,983",
+    "Module": "views",
+    "Lineno": 36,
+    "Str Lineno": "36",
+    "Level": "INFO",
+    "Session Id": "29003797",
+    "Multi Attrs": "views - 36: log_json ",
+    "Message": "{'number of people': '1', 'result': 'No mask', 'score': '0.5509686470031738', 'platform': 'Baidu'}"
+}

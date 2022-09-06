@@ -1,0 +1,7 @@
+{
+    "@timestamp": "2022-07-28 16:12:04,974",
+    "Module": "views",
+    "Lineno": 30,
+    "Level": "INFO",
+    "Message": "{'Number of People': '1', 'Result': 'No mask', 'Score': '0.9652449488639832', 'Platform': 'Baidu'}"
+}
